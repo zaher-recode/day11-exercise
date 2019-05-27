@@ -4,7 +4,16 @@
 # You may not use the Array#sort method in your solution
 
 # Write Your method code here
-
+def is_sorted?(array)
+    i=0
+    while i<array.length - 2
+       if array[i]>array[i + 1]
+        return false
+       end
+        i+=1
+    end
+    return true
+end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was

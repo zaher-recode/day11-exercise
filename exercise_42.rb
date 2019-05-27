@@ -3,7 +3,40 @@
 # The method should return a new string where streaks of consecutive characters are compressed to a number followed by the character.
 # For example "aaabbc" is compressed to "3a2bc".
 
+
+
+# convert string to array
+
+# hash { letter: count} default = 1
+
+# while loop  i<len -1
+#     if [i] == [i+1]
+#     count= hash[letter] +=1 
+#     i += 1
+# end
+# return hash.to_a (flatten) lets return hash for now.
+# end
+
 # Write Your method code here
+def compress_string(string)
+    i = 0
+    result =""
+    count = 1
+    while i<string.length
+        if i < string.length - 1
+            if string[i] == string[i + 1]
+                count += 1
+            else
+                result += "#{count if count>1}#{string[i]}"
+                count = 1
+            end
+        elsif i == string.length - 1
+                result += "#{count if count>1}#{string[i]}"
+        end
+        i += 1
+    end
+    return result
+end
 
 # Driver Code: Do not edit under this line
 

@@ -1,10 +1,14 @@
 # Exercise 37
-# You will write a method, element_swap!(array, index_1, index_2), that accepts an array and two integers as indices
-# The method should swap the elements at the given indices and return the array.
+# You will write a method, element_swap!(array, index_1, index_2), that accepts an array and two integers as indexes
+# The method should swap the elements at the given indexes and return the array.
 # Note: this method has a BANG!, thus, it must MUTATE the input array. 
 # This means that the object_id of the input array should be identical to the object_id of the returned array. 
 
 # Write Your method code here
+def element_swap!(array, index_1, index_2)
+    array[index_1], array[index_2] = array[index_2], array[index_1]
+    return array
+end
 
 # Driver Code: Do not edit under this line
 

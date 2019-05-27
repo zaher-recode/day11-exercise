@@ -4,6 +4,24 @@
 # You may not use the Array#sort method in your solution
 
 # Write Your method code here
+[2, 8, 5, 2, 6]
+def bubble_sort(array)
+    sorted = false
+    while ! sorted
+        i = 0
+        sorted = true
+        while i < array.length - 1
+            if array[i] > array[i + 1]
+                array[i], array[i+1] = array[i+1], array[i]
+                sorted = false
+                # p sorted
+            end
+            i+=1
+        end
+    end
+    return array
+
+end
 
 # Driver Code: Do not edit under this line
 

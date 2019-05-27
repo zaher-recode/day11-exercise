@@ -5,6 +5,21 @@
 # The first or last element of the array is considered a "peak" if it is greater than it's one neighbour
 
 # Write Your method code here
+def find_peaks(array)
+    i = 0
+    peaks = Array.new
+    while i < array.length
+        if i == 0
+            peaks << array[i] if array[i]> array[i+1]
+        elsif i == array.length - 1
+            peaks << array[i] if array[i]> array[i-1]
+        else
+            peaks << array[i] if (array[i]> array[i-1] && array[i]> array[i+1])
+        end
+        i += 1
+    end
+    return peaks
+end
 
 # Driver Code: Do not edit under this line
 

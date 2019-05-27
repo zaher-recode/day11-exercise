@@ -5,7 +5,16 @@
 # You may not use any Enum derived iterations, only for, while or until
 
 # Write Your method code here
+ def global_linear_search(array, target)
+    i = 0
+    result = []
+    while i < array.length
+        result << i if array[i] == target
+        i+=1
+    end
+    return result
 
+ end
 # Driver Code: Do not edit under this line
 
 # check_solution runs a single test case and prints whether it was
@@ -25,7 +34,7 @@ end
 def run_tests()
     check_solution(1, "bananas".split(""), "a", [1,3,5])
     check_solution(2, "enumerables".split(""), "e", [0,4,9])
-    check_solution(3, "united states of america".split(""), [9, 17, 23]])
+    check_solution(3, "united states of america".split(""), "a" ,[9, 17, 23])
 end
 
 # Execute the tests.
