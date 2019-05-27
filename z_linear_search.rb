@@ -4,8 +4,15 @@
 # You may not use any Array or Enum methods except length or size
 # You may not use any Enum derived iterations, only for, while or until
 
-def linear_search(target, searchfrom)
+def linear_search(target, array)
 	#Your code here
+	# array.each_with_index { |el,index| return index if el == target}
+	i = 0
+	while i< array.length	
+		return i if array[i] == target
+		i+=1
+	end
+	return nil
 end
 
 random_numbers = [6,29,18,2,72,19,18,10,37]
